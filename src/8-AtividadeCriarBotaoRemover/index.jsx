@@ -39,7 +39,6 @@ export default function Home() {
   return (
     <div>
       <Header title={"Livros sobre Criptídeos"} />
-      <h1>Livros sobre Criptídeos</h1>
 
       {
         listaProdutos.map((produto) =>

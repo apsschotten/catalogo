@@ -19,11 +19,14 @@ body {
 }
 
 h1 {
+    width: 750px;
+    height: 250px;
     font-size: 28px;
     font-weight: bold;
     text-align: left;
     margin-bottom: 20px;
-    color: #333;
+    color: #fff;
+    background-color: #2f0a4f;
 }
 
 ol {
