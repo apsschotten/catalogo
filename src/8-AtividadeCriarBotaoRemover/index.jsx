@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function Home() {
 
@@ -36,6 +38,7 @@ export default function Home() {
 
   return (
     <div>
+      <Header title={"Livros sobre Criptídeos"} />
       <h1>Livros sobre Criptídeos</h1>
 
       {
@@ -56,6 +59,7 @@ export default function Home() {
           </div>
         )
       }
+      <Footer desenvolvedor={"Ana Paula S. Schotten - INFO 3B"} />
     </div>
   );
 }
