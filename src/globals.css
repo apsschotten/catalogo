@@ -6,7 +6,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: repeating-linear-gradient(to right,
+            #5e2f6f 0px,
+            #5e2f6f 40px,
+            #8c5091 40px,
+            #8c5091 80px);
 }
 
 .container {
@@ -19,14 +23,63 @@ body {
 }
 
 h1 {
+    color: #000000;
+}
+
+#Top {
     width: 750px;
-    height: 250px;
-    font-size: 28px;
-    font-weight: bold;
+    height: 150px;
     text-align: left;
-    margin-bottom: 20px;
     color: #fff;
     background-color: #2f0a4f;
+    border-radius: 25px 25px 0px 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Logo {
+    height: 150px;
+}
+
+#Name{
+    height: 115px;
+}
+
+#Stars{
+    width: 375px;
+    margin-top: -1px;
+}
+
+#TSB{
+    display: flex;
+    flex-direction: column;
+}
+
+#Switch {
+    background-color: #ebebeb;
+}
+
+p{
+    display: flex;
+}
+
+#ProdImages{
+    height: 100px;
+}
+
+#Bottom {
+    height: 50px;
+    background-color: #2f0a4f;
+    color: #D65DC4;
+    border-radius: 0px 0px 25px 25px;
+    font-family: fantasy;
+    font-size: 20px;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 ol {

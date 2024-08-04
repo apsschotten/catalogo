@@ -5,12 +5,12 @@ import Footer from "./components/Footer";
 export default function Home() {
 
   const [listaProdutos, setProdutos] = useState([
-    { id: 1, nome: 'Flatwoods Monster: Além de Fallout 76', preço: 'R$ 19,52' },
-    { id: 2, nome: 'Indrid Cold: O Humanóide de Lanulos', preço: 'R$ 19,66' },
-    { id: 3, nome: 'Mothman: As Profecias', preço: 'R$ 19,66' },
-    { id: 4, nome: 'Owlman: O Mothman Britânico', preço: 'R$ 19,76' },
-    { id: 5, nome: 'Melon Heads: Canibais Americanos', preço: 'R$ 19,60' },
-    { id: 6, nome: 'Criptozoologia: Guia Completo', preço: 'R$ 19,53' }
+    { id: 1, nome: 'Flatwoods Monster: Além de Fallout 76', preço: 'R$ 19,52', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/FlatWoods.png' },
+    { id: 2, nome: 'Indrid Cold: O Humanóide de Lanulos', preço: 'R$ 19,66', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/IndridCold.png' },
+    { id: 3, nome: 'Mothman: As Profecias', preço: 'R$ 19,66', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Mothman.png' },
+    { id: 4, nome: 'Owlman: O Mothman Britânico', preço: 'R$ 19,76', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Owlman.png' },
+    { id: 5, nome: 'Melon Heads: Canibais Americanos', preço: 'R$ 19,60', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/MelonHeads.png' },
+    { id: 6, nome: 'Criptozoologia: Guia Completo - Box com as Três Edições!!', preço: 'R$ 19,53', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Box.png' }
   ]);
 
   const [listaPedidos, setListaPedidos] = useState([]);
@@ -37,28 +37,41 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <Header title={"Livros sobre Criptídeos"} />
+    <div id="TSB">
+      <div id="Top">
+        <img src="src/8-AtividadeCriarBotaoRemover/components/images/Logo.png" id="Logo" />
+        <img src="src/8-AtividadeCriarBotaoRemover/components/images/SiteName.png" id="Name" />
+      </div>
 
-      {
-        listaProdutos.map((produto) =>
-          <div key={produto.id}>
-            <p>{produto.nome}</p>
-            <p>{produto.preço}</p>
-            <button onClick={() => adicionarItemPedidos(produto)}>Selecionar</button>
-          </div>
-        )
-      }
-      {
-        listaPedidos.map((produto) =>
-          <div key={produto.id}>
-            <p>{produto.nome}</p>
-            <p>{produto.preço}</p>
-            <button onClick={() => removerPedido(produto.id)}>Remover</button>
-          </div>
-        )
-      }
-      <Footer desenvolvedor={"Ana Paula S. Schotten - INFO 3B"} />
+      <div id="Switch">
+        <img src="src/8-AtividadeCriarBotaoRemover/components/images/Stars.gif" id="Stars" />
+        <img src="src/8-AtividadeCriarBotaoRemover/components/images/Stars.gif" id="Stars" />
+        <Header title={"Livros sobre Criptídeos"} />
+        {
+          listaProdutos.map((produto) =>
+            <div key={produto.id}>
+              <img src={produto.imagem} id="ProdImages" />
+              <h2>{produto.nome}</h2>
+              <h3>{produto.preço}</h3>
+              <button onClick={() => adicionarItemPedidos(produto)}>Selecionar</button>
+            </div>
+          )
+        }
+        {
+          listaPedidos.map((produto) =>
+            <div key={produto.id}>
+              <img src={produto.imagem} id="ProdImages" />
+              <h2>{produto.nome}</h2>
+              <h3>{produto.preço}</h3>
+              <button onClick={() => removerPedido(produto.id)}>Remover</button>
+            </div>
+          )
+        }
+      </div>
+
+      <div id="Bottom">
+        <Footer desenvolvedor={"Ana Paula S. Schotten - INFO 3B"} />
+      </div>
     </div>
   );
 }
