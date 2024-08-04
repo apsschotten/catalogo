@@ -5,12 +5,12 @@ import Footer from "./components/Footer";
 export default function Home() {
 
   const [listaProdutos, setProdutos] = useState([
-    { id: 1, nome: 'Flatwoods Monster: Além de Fallout 76', preço: 'R$ 19,52', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/FlatWoods.png' },
-    { id: 2, nome: 'Indrid Cold: O Humanóide de Lanulos', preço: 'R$ 19,66', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/IndridCold.png' },
-    { id: 3, nome: 'Mothman: As Profecias', preço: 'R$ 19,66', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Mothman.png' },
-    { id: 4, nome: 'Owlman: O Mothman Britânico', preço: 'R$ 19,76', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Owlman.png' },
-    { id: 5, nome: 'Melon Heads: Canibais Americanos', preço: 'R$ 19,60', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/MelonHeads.png' },
-    { id: 6, nome: 'Criptozoologia: Guia Completo - Box com as Três Edições!!', preço: 'R$ 19,53', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Box.png'}
+    { id: 1, nome: 'Flatwoods Monster: ', subtitle: 'Além de Fallout 76', preço: 'R$ 19,52', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/FlatWoods.png' },
+    { id: 2, nome: 'Indrid Cold: ', subtitle: 'O Humanóide de Lanulos', preço: 'R$ 19,66', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/IndridCold.png' },
+    { id: 3, nome: 'Mothman: ', subtitle: 'As Profecias', preço: 'R$ 19,66', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Mothman.png' },
+    { id: 4, nome: 'Owlman: ', subtitle: 'O Mothman Britânico', preço: 'R$ 19,76', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Owlman.png' },
+    { id: 5, nome: 'Melon Heads: ', subtitle: 'Canibais Americanos', preço: 'R$ 19,60', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/MelonHeads.png' },
+    { id: 6, nome: 'Criptozoologia: ', subtitle: 'Guia Completo - Box com as Três Edições!!', preço: 'R$ 19,53', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Box.png'}
   ]);
 
   const [listaPedidos, setListaPedidos] = useState([]);
@@ -43,15 +43,17 @@ export default function Home() {
         <img src="src/8-AtividadeCriarBotaoRemover/components/images/SiteName.png" id="Name" />
       </div>
 
-      <div id="Switch">
-        <img src="src/8-AtividadeCriarBotaoRemover/components/images/Stars.gif" id="Stars" />
+      <img src="src/8-AtividadeCriarBotaoRemover/components/images/Stars.gif" id="Stars" />
         <img src="src/8-AtividadeCriarBotaoRemover/components/images/Stars.gif" id="Stars" />
         <Header title={"Livros sobre Criptídeos"} />
+
+      <div id="Switch">
         {
           listaProdutos.map((produto) =>
             <div key={produto.id} id="Prod">
               <img src={produto.imagem} id="ProdImages" />
-              <p>{produto.nome}</p>
+              <p class="PName">{produto.nome}</p>
+              <p class="PSub">{produto.subtitle}</p>
               <p id="Price">{produto.preço}</p>
               <button onClick={() => adicionarItemPedidos(produto)}>Adicionar ao Carrinho!</button>
             </div>
@@ -61,7 +63,8 @@ export default function Home() {
           listaPedidos.map((produto) =>
             <div key={produto.id} id="Prod">
               <img src={produto.imagem} id="ProdImages" />
-              <p>{produto.nome}</p>
+              <p class="PName">{produto.nome}</p>
+              <p class="PSub">{produto.subtitle}</p>
               <p id="Price">{produto.preço}</p>
               <button onClick={() => removerPedido(produto.id)}>Remover</button>
             </div>
