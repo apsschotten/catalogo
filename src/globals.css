@@ -65,7 +65,7 @@ h1 {
 }
 
 #Prod{
-    border: 3px #999999;
+    border: 1px #999999;
     border-radius: 25px;
     border-style: solid;
     display: flex;
@@ -95,7 +95,9 @@ h1 {
 
 button{
     height: 50px;
-    
+    width: 200px;
+    border-radius: 0px 0px 25px 25px;
+    border: 1px #333;
 }
 
 #Bottom {

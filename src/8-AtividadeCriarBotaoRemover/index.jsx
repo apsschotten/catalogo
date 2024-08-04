@@ -53,7 +53,7 @@ export default function Home() {
               <img src={produto.imagem} id="ProdImages" />
               <p>{produto.nome}</p>
               <p id="Price">{produto.preço}</p>
-              <button onClick={() => adicionarItemPedidos(produto)}>Selecionar</button>
+              <button onClick={() => adicionarItemPedidos(produto)}>Adicionar ao Carrinho!</button>
             </div>
           )
         }
