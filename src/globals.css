@@ -5,12 +5,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background: repeating-linear-gradient(to right,
             #5e2f6f 0px,
-            #5e2f6f 40px,
-            #8c5091 40px,
-            #8c5091 80px);
+            #5e2f6f 20px,
+            #8c5091 20px,
+            #8c5091 40px);
+    overflow: scroll;
 }
 
 .container {
@@ -20,6 +21,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: scroll;
 }
 
 h1 {
@@ -27,8 +29,9 @@ h1 {
 }
 
 #Top {
-    width: 750px;
-    height: 150px;
+    margin-top: 50px;
+    width: 500px;
+    height: 100px;
     text-align: left;
     color: #fff;
     background-color: #2f0a4f;
@@ -40,15 +43,15 @@ h1 {
 }
 
 #Logo {
-    height: 150px;
+    height: 100px;
 }
 
 #Name{
-    height: 115px;
+    height: 75px;
 }
 
 #Stars{
-    width: 375px;
+    width: 250px;
     margin-top: -1px;
 }
 
@@ -61,25 +64,57 @@ h1 {
     background-color: #ebebeb;
 }
 
-p{
+#Prod{
+    border: 3px #999999;
+    border-radius: 25px;
+    border-style: solid;
     display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 200px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #ProdImages{
-    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 115px;
+    width: 160px;
+    border-radius: 15px;
+    margin-left: 25px;
+}
+
+#Price{
+    color: #D65DC4;
+}
+
+button{
+    height: 50px;
+    
 }
 
 #Bottom {
-    height: 50px;
+    width: 500px;
+    height: 35px;
     background-color: #2f0a4f;
     color: #D65DC4;
     border-radius: 0px 0px 25px 25px;
     font-family: fantasy;
-    font-size: 20px;
+    font-size: 15px;
     font-style: italic;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.Berries{
+    height: 30px;
+    padding: 5px;
 }
 
 ol {

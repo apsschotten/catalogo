@@ -10,7 +10,7 @@ export default function Home() {
     { id: 3, nome: 'Mothman: As Profecias', preço: 'R$ 19,66', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Mothman.png' },
     { id: 4, nome: 'Owlman: O Mothman Britânico', preço: 'R$ 19,76', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Owlman.png' },
     { id: 5, nome: 'Melon Heads: Canibais Americanos', preço: 'R$ 19,60', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/MelonHeads.png' },
-    { id: 6, nome: 'Criptozoologia: Guia Completo - Box com as Três Edições!!', preço: 'R$ 19,53', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Box.png' }
+    { id: 6, nome: 'Criptozoologia: Guia Completo - Box com as Três Edições!!', preço: 'R$ 19,53', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Box.png'}
   ]);
 
   const [listaPedidos, setListaPedidos] = useState([]);
@@ -49,20 +49,20 @@ export default function Home() {
         <Header title={"Livros sobre Criptídeos"} />
         {
           listaProdutos.map((produto) =>
-            <div key={produto.id}>
+            <div key={produto.id} id="Prod">
               <img src={produto.imagem} id="ProdImages" />
-              <h2>{produto.nome}</h2>
-              <h3>{produto.preço}</h3>
+              <p>{produto.nome}</p>
+              <p id="Price">{produto.preço}</p>
               <button onClick={() => adicionarItemPedidos(produto)}>Selecionar</button>
             </div>
           )
         }
         {
           listaPedidos.map((produto) =>
-            <div key={produto.id}>
+            <div key={produto.id} id="Prod">
               <img src={produto.imagem} id="ProdImages" />
-              <h2>{produto.nome}</h2>
-              <h3>{produto.preço}</h3>
+              <p>{produto.nome}</p>
+              <p id="Price">{produto.preço}</p>
               <button onClick={() => removerPedido(produto.id)}>Remover</button>
             </div>
           )
@@ -70,7 +70,9 @@ export default function Home() {
       </div>
 
       <div id="Bottom">
+        <img src="src\8-AtividadeCriarBotaoRemover\components\images\Berries.png" class="Berries"/>
         <Footer desenvolvedor={"Ana Paula S. Schotten - INFO 3B"} />
+        <img src="src\8-AtividadeCriarBotaoRemover\components\images\Berries02.png" class="Berries"/>
       </div>
     </div>
   );
