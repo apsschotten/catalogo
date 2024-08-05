@@ -57,27 +57,43 @@ h1 {
 
 #TSB{
     flex-direction: column;
-    background-color: #ebebeb;
+    background-color: #f5f5f5;
     border-radius: 30px;
+}
+
+#Title{
+    font-family:serif;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #D65DC4;
+}
+
+.TYuri{
+    height: 75px;
+    margin-bottom: 20px;
 }
 
 #Switch {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: -40px;
 }
 
 #Prod{
     border: 1px #999999;
     border-radius: 25px;
     border-style: solid;
-
+    margin-left: 35px;
     height: 250px;
     width: 175px;
-    margin: 15px;
     margin-bottom: 15px;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     padding: 0;
 }
@@ -86,14 +102,16 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
     font-weight: bold;
-    margin-top: -10px;
+    margin-top: -5px;
+    text-align: center;
 }
 
 .PSub{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 13px;
     font-style: italic;
-    margin-top: -25px;
+    margin-top: -15px;
+    text-align: center;
 }
 
 #ProdImages{
@@ -106,18 +124,22 @@ h1 {
 
 #Price{
     color: #D65DC4;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 5px;
 }
 
 button{
-    height: 50px;
-    width: 175px;
-    border-radius: 0px 0px 25px 25px;
+    height: 40px;
+    width: 177px;
+    border-radius: 0px 0px 17px 17px;
     border: 2px #4f4183;
     background-color: #4f4183;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
     font-size: 12px;
     font-style: italic;
+    position: calc()
 }
 
 button:hover{
@@ -139,6 +161,7 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .Berries{

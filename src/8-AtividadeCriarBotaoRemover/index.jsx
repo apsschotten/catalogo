@@ -10,7 +10,7 @@ export default function Home() {
     { id: 3, nome: 'Mothman: ', subtitle: 'As Profecias', preço: 'R$ 19,66', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Mothman.png' },
     { id: 4, nome: 'Owlman: ', subtitle: 'O Mothman Britânico', preço: 'R$ 19,76', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Owlman.png' },
     { id: 5, nome: 'Melon Heads: ', subtitle: 'Canibais Americanos', preço: 'R$ 19,60', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/MelonHeads.png' },
-    { id: 6, nome: 'Criptozoologia: ', subtitle: 'Guia Completo - Box com as Três Edições!!', preço: 'R$ 19,53', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Box.png'}
+    { id: 6, nome: 'Criptozoologia: ', subtitle: 'Guia Completo - Box com as Três Edições!!', preço: 'R$ 19,53', imagem: 'src/8-AtividadeCriarBotaoRemover/components/images/Box.png' }
   ]);
 
   const [listaPedidos, setListaPedidos] = useState([]);
@@ -44,8 +44,13 @@ export default function Home() {
       </div>
 
       <img src="src/8-AtividadeCriarBotaoRemover/components/images/Stars.gif" id="Stars" />
-        <img src="src/8-AtividadeCriarBotaoRemover/components/images/Stars.gif" id="Stars" />
+      <img src="src/8-AtividadeCriarBotaoRemover/components/images/Stars.gif" id="Stars" />
+
+      <div id="Title">
+        <img src="src/8-AtividadeCriarBotaoRemover/components/images/Title.gif" class="TYuri"/>
         <Header title={"Livros sobre Criptídeos"} />
+        <img src="src/8-AtividadeCriarBotaoRemover/components/images/Title2.gif" class="TYuri"/>
+      </div>
 
       <div id="Switch">
         {
@@ -73,9 +78,9 @@ export default function Home() {
       </div>
 
       <div id="Bottom">
-        <img src="src\8-AtividadeCriarBotaoRemover\components\images\Berries.png" class="Berries"/>
+        <img src="src\8-AtividadeCriarBotaoRemover\components\images\Berries.png" class="Berries" />
         <Footer desenvolvedor={"Ana Paula S. Schotten - INFO 3B"} />
-        <img src="src\8-AtividadeCriarBotaoRemover\components\images\Berries02.png" class="Berries"/>
+        <img src="src\8-AtividadeCriarBotaoRemover\components\images\Berries02.png" class="Berries" />
       </div>
     </div>
   );
