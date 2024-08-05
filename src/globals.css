@@ -102,8 +102,10 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 17px;
     font-weight: bold;
-    margin-top: -5px;
+    margin-top: 70px;
     text-align: center;
+
+    position: relative;
 }
 
 .PSub{
@@ -115,18 +117,21 @@ h1 {
 }
 
 #ProdImages{
-    margin-top: 10px;
+    margin-top: -110px;
     margin-bottom: 10px;
     height: 100px;
     width: 145px;
     border-radius: 15px;
+
+    position: absolute;
 }
 
 #Price{
     color: #D65DC4;
     font-weight: bold;
-    margin-top: -10px;
-    margin-bottom: 5px;
+    margin-top: 160px;
+
+    position: absolute;
 }
 
 button{
@@ -139,7 +144,9 @@ button{
     color: #fff;
     font-size: 12px;
     font-style: italic;
-    position: calc()
+    position: absolute;
+
+    margin-top: 212px;
 }
 
 button:hover{
